@@ -86,7 +86,6 @@ function displayData() {
         document.getElementById('extraQuestionDiv').classList.remove('hidden');
     } else {
         document.getElementById('extraQuestionDiv').classList.add('hidden');
-        console.error("Image path not met")
     }
 
     var settingsObject;
@@ -118,6 +117,34 @@ function displayData() {
 
 
 }
+
+
+// Your modal display code here
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("extraQuestionModal");
+    var btn = document.getElementById("infoIcon");
+    var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function (event) {
+            modal.style.display = "block";
+
+            // Position the modal near the clicked element
+            var rect = event.target.getBoundingClientRect();
+            modal.style.left = rect.left + 'px';
+            modal.style.top = rect.bottom + 'px';
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+});
 
 // Define image data
 var data = {

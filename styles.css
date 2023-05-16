@@ -65,3 +65,46 @@ ul {
 li {
     margin-bottom: 10px;
 }
+
+#infoIcon {
+    color: #333;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .modal {
+    display: none;
+    position: absolute;
+    background-color: #fefefe; /* Change this to change the background color */
+    border: 2px solid #888; /* Change this to change the border */
+    border-radius: 10px; /* Add this to make the corners rounded */
+    width: 30%; /* Change this to adjust the width */
+    height: auto; /* Change this to adjust the height */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Adjust this to change the shadow */
+    padding: 20px;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+  

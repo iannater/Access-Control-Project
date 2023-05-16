@@ -2,6 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -27,10 +29,10 @@
         </div>
 
         <div id="extraQuestionDiv" class="hidden">
-            <h2>Would you like to assign user groups or set access duration on the employee?</h2>
+            <h2>Would you like to set access groups or set access duration on the employee? <i id="infoIcon" class="fas fa-info-circle"></i> </h2>
             <select id="extraQuestion" onchange="displayData()">
                 <option value="default">Please select an option</option>
-                <option value="assignUserGroups">Assign user groups</option>
+                <option value="assignUserGroups">Set Access Groups</option>
                 <option value="setAccessDuration">Set Employee Access Duration</option>
             </select>
         </div>
@@ -47,6 +49,20 @@
         </div>
         
     </form>
-    <script src="script.js"></script>
+
+    <div id="extraQuestionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>There are two ways that you can allow your employees access with this method.</p>
+            <p><strong><u>Access Groups-</u></strong><br>
+                This allow us to dynamically assign this employee groups from your access control system. First, you would create a group for your office or set of doors similar to "SFO" or "Exterior Doors". Then, in the configuration set up you would select those groups for us to assign. These groups would be assigned to this employee until they sign out.
+            </p>
+            <p><strong><u>Employee Access Duration.</u></strong><br>
+                For this method you would select an amount of time the employees badge is active after the sign-in. You will see this listed in the configuration steps below as "Access Duration" below after making a selection.
+            </p>
+        </div>
+    </div>
+    
+      
 </body>
 </html>
