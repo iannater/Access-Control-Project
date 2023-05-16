@@ -13,11 +13,21 @@ function displayData() {
     if (integration === 'avigilon' && behavior === 'tapBadge') {
         imagePath = data.avigilon.badgeSignIn;
         document.getElementById('integrationTitle').classList.remove('hidden');
-    } else if (integration === 'avigilon' && behavior === 'registerSignIn' && extraQuestion === 'assignUserGroups') {
+    } 
+    else if (integration === 'avigilon' && behavior === 'registerSignIn' && extraQuestion === 'assignUserGroups') {
         imagePath = data.avigilon.restrictedAccessUser;
         document.getElementById('integrationTitle').classList.remove('hidden');
-    } else if (integration === 'avigilon' && behavior === 'registerSignIn' && extraQuestion === 'setEmployeeAccessDuration') {
+    } 
+    else if (integration === 'avigilon' && behavior === 'registerSignIn' && extraQuestion === 'setEmployeeAccessDuration') {
         imagePath = data.avigilon.restrictedAccessEmployee;
+        document.getElementById('integrationTitle').classList.remove('hidden');
+    } 
+    else if (integration === 'avigilon' && behavior === 'registerAccess' && extraQuestion === 'assignUserGroups') {
+        imagePath = data.avigilon.regTapBadgeUser;
+        document.getElementById('integrationTitle').classList.remove('hidden');
+    } 
+    else if (integration === 'avigilon' && behavior === 'registerAccess' && extraQuestion === 'setEmployeeAccessDuration') {
+        imagePath = data.avigilon.regTapBadgeEmployee;
         document.getElementById('integrationTitle').classList.remove('hidden');
     } 
 
@@ -49,8 +59,8 @@ var data = {
         restrictedAccessEmployee: 'assets/avigilon/restrictedAccessEmployee.png',
         restrictedAccessUser: 'assets/avigilon/restrictedAccessUser.png',
         badgeSignIn: 'assets/avigilon/badgeSignIn.png',
-        regTapBadgeEmployee:'regTapBadgeEmployee.png',
-        regTapBadgeUser:'regTapBadgeUser.png'
+        regTapBadgeEmployee:'assets/avigilon/regTapBadgeEmployee.png',
+        regTapBadgeUser:'assets/avigilon/regTapBadgeUser.png'
     },
     brivo: {
         // add your Brivo images here...
