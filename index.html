@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>What Access Control Integration would you like to use?</h2>
+    <select id="integration" onchange="displayData()">
+        <option value="default">Please select an option</option>
+        <option value="avigilon">Avigilon Alta (Open Path)</option>
+        <option value="brivo">Brivo</option>
+        <option value="kisi">Kisi</option>
+    </select>
+
+    <div id="behaviorDiv" class="hidden">
+        <h2>What is the expected behavior for your employees?</h2>
+        <select id="behavior" onchange="displayData()">
+            <option value="default">Please select an option</option>
+            <option value="registerSignIn">Employees must register and sign in within Envoy in order for their badges to work</option>
+            <option value="tapBadge">Employees tap their badge and are automatically registered and signed into Envoy</option>
+            <option value="registerAccess">Employees must register within Envoy to gain building access, then tap their badge to sign in</option>
+        </select>
+    </div>
+
+    <div id="extraQuestionDiv" class="hidden">
+        <h2>Would you like to use assign user groups or set access duration on the employee?</h2>
+        <select id="extraQuestion" onchange="displayData()">
+            <option value="default">Please select an option</option>
+            <option value="assignUserGroups">Assign user groups</option>
+            <option value="setEmployeeAccessDuration">Set Employee Access Duration</option>
+        </select>
+    </div>
+
+    <div id="integrationTitle" class="hidden">
+        <h2>Please set up your integration within Envoy to match these settings</h2>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
