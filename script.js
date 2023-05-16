@@ -9,7 +9,7 @@ function displayData() {
 
     var imagePath;
 
-    // Check for what the user has selected
+    //Avigilon 
     if (integration === 'avigilon' && behavior === 'tapBadge') {
         imagePath = data.avigilon.badgeSignIn;
         document.getElementById('integrationTitle').classList.remove('hidden');
@@ -30,6 +30,22 @@ function displayData() {
         imagePath = data.avigilon.regTapBadgeEmployee;
         document.getElementById('integrationTitle').classList.remove('hidden');
     } 
+    //Brivo
+
+    //Kisi
+    if (integration === 'kisi' && behavior === 'tapBadge') {
+        imagePath = data.kisi.badgeSignIn;
+        document.getElementById('integrationTitle').classList.remove('hidden');
+    } 
+    else if (integration === 'kisi' && behavior === 'registerSignIn') {
+        imagePath = data.kisi.regSignIn;
+        document.getElementById('integrationTitle').classList.remove('hidden');
+    } 
+    else if (integration === 'kisi' && behavior === 'registerAccess') {
+        imagePath = data.kisi.restrictedAccessEmployee;
+        document.getElementById('integrationTitle').classList.remove('hidden');
+    } 
+
 
     if (imagePath) {
         // Create a new img element
@@ -66,7 +82,9 @@ var data = {
         // add your Brivo images here...
     },
     kisi: {
-        // add your Kisi images here...
+        restrictedAccessEmployee: 'assets/kisi/ResAccess.png',
+        badgeSignIn: 'assets/kisi/BadgeSignIn.png',
+        regSignIn:'assets/kisi/RegAccess.png'
     },
     // add more integrations as needed...
 };
