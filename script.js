@@ -103,7 +103,7 @@ function displayData() {
     var accountSettingsList = document.getElementById('accountSettingsList');
     // Clear the list
     accountSettingsList.innerHTML = '';
-    if (settingsObject && extraQuestion !== 'default') {
+    if (settingsObject && (extraQuestion !== 'default' || behavior === 'tapBadge')) {
         // Create a new list item for each key-value pair in the settings object
         for (var key in settingsObject) {
             var formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, function (str) { return str.toUpperCase(); });
@@ -116,11 +116,8 @@ function displayData() {
         accountSettingsDiv.classList.add('hidden');
     }
 
+
 }
-
-
-
-
 
 // Define image data
 var data = {
